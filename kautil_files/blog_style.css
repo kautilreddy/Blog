@@ -1,0 +1,596 @@
+.grid{
+    height: 100%;
+    background-color: #334
+}
+#grid-lines{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.helloheader{
+    text-align: center;
+    color: #58585b !important;
+    font-size: 4vh !important;
+    margin-bottom: 0.2em !important;
+    font-size: 30px;
+    margin-top: 10px;
+}
+.main-container{
+    overflow: hidden;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 90vh;
+    top: 0;
+}
+.holder{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-repeat:no-repeat; 
+    background-size:contain;
+    background-position:center
+}
+.devider-grid {
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out
+}
+.devider-grid .devider {
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    z-index: 14
+}
+.devider-grid .deviderV {
+    top: 0;
+    bottom: 0;
+    width: 1px
+}
+.devider-grid .deviderV1 {
+    left: 33.33%
+}
+.devider-grid .deviderV2 {
+    left: 66.66%
+}
+.devider-grid .deviderH {
+    left: 0;
+    right: 0;
+    height: 1px
+}
+.devider-grid .deviderH1 {
+    top: 50%
+}
+.thumb {
+    margin: 0;
+    padding: 0;
+    height: 50%;
+    width: 33.33%
+}
+.flow-hidden {
+    height: 100vh
+}
+.thumb .content {
+    height: 30px;
+    overflow: hidden;
+    position: absolute;
+    color: rgba(255, 255, 255, .8);
+    bottom: 3px;
+    right: 20px;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out
+}
+#grid-lines .thumb .content h2 {
+    font-size: 14px!important;
+    color: #fff!important;
+    line-height: 14px;
+    font-weight: 400;
+    opacity: 1;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    margin: 0;
+    padding: 0
+}
+.thumb:hover .content h2 {
+    opacity: 0!important;
+    margin-top: -20px!important
+}
+.thumb .story {
+    opacity: 0;
+    width: 100%;
+    height: 100.1%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    position: relative;
+    top: 0;
+    left: 1px;
+    cursor: pointer;
+    overflow: hidden;
+    color: #fff;
+    padding: 20px
+}
+.thumb:hover .story {
+    background-color: red;
+    opacity: .9
+}
+.thumb .story .story-count {
+    display: none
+}
+#grid-lines .thumb .story h3 {
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    text-align: right;
+    font-size: 24px!important;
+    color: #fff!important;
+    line-height: 26px;
+    margin: 20px 10px 10px 20px!important;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+.thumb .story h4 {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    text-align: right;
+    width: 100%;
+    opacity: .1;
+    float: right;
+    font-size: 14px;
+    line-height: 24px;
+    margin-right: 20px;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+.thumb .story:hover h3,
+.thumb:hover .story h4 {
+    margin-right: 0
+}
+.thumb .story small {
+    font-size: 12px;
+    line-height: 12px
+}
+.thumb .story small span {
+    width: 100%;
+    float: right;
+    font-size: 10px
+}
+.story .img-thumb {
+    max-width: 70px;
+    display: inline-block;
+    bottom: 20px;
+    position: absolute
+}
+.story .img-thumb img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out
+}
+.story:hover .img-thumb img {
+    opacity: 1
+}
+.thumb .story .inner-content {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    text-align: right;
+    width: 65%;
+    line-height: 16px;
+    height: 44px;
+    overflow: hidden
+}
+.thumb .story .inner-content div {
+    margin-top: 50px;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    float: right;
+    font-size: 16px
+}
+.thumb:hover .story .inner-content div {
+    margin-top: 0
+}
+.story-img,
+.story-img-mob {
+    display: none;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #333;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+.story-img img {
+    top: 0;
+    margin: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%
+}
+.story-img {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transition: transform .5s ease-out;
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+    -moz-transition: -moz-transform .5s ease-in-out;
+    -o-transition: -o-transform .5s ease-in-out
+}
+.story-img.active {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    display: block
+}
+.story-img.active1 {
+    animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    -webkit-animation: fadein 2s;
+    -o-animation: fadein 2s;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1)
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+        width: 110%
+    }
+    to {
+        opacity: 1;
+        width: 100%
+    }
+}
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+        width: 110%
+    }
+    to {
+        opacity: 1;
+        width: 100%
+    }
+}
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+        width: 110%
+    }
+    to {
+        opacity: 1;
+        width: 100%
+    }
+}
+@-o-keyframes fadein {
+    from {
+        opacity: 0;
+        width: 110%
+    }
+    to {
+        opacity: 1;
+        width: 100%
+    }
+}
+#startup-video-cont {
+    width: 100%;
+    height: 100%!important;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: #1688CC
+}
+#startup-video-cont video {
+    width: 100%;
+    vertical-align: middle;
+    display: table-cell
+}
+#startup-video-cont.video-hovered {
+    opacity: 0
+}
+.story.tile-first,
+.story.tile-last,
+.story.tile-second,
+.story.tile-thrid {
+    opacity: .9;
+    transition: transform .5s ease-out;
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+    -moz-transition: -moz-transform .5s ease-in-out;
+    -o-transition: -o-transform .5s ease-in-out
+}
+.story.tile-first {
+    background-color: #f4ba49
+}
+.story.tile-last {
+    background-color: #ff3d00
+}
+.story.tile-thrid {
+    background-color: #f4ba49
+}
+.story.tile-second {
+    background-color: #c1bfd8
+}
+.story.tile-first .img-thumb img,
+.story.tile-first h3,
+.story.tile-last .img-thumb img,
+.story.tile-last h3,
+.story.tile-second .img-thumb img,
+.story.tile-second h3,
+.story.tile-thrid .img-thumb img,
+.story.tile-thrid h3 {
+    opacity: 1
+}
+.story.tile-first .inner-content div,
+.story.tile-last .inner-content div,
+.story.tile-second .inner-content div,
+.story.tile-thrid .inner-content div {
+    margin-top: 0
+}
+#grid-lines .owl-carousel {
+    display: block;
+    height: 100%
+}
+span.jio-menu {
+    display: none;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    z-index: 999
+}
+.jio-menu-expanded:before,
+span.jio-menu:before {
+    content: "";
+    padding: 0;
+    position: absolute;
+    display: block;
+    color: #aaadb2;
+    font-size: 16px;
+    line-height: 15px;
+    cursor: pointer;
+    background: url(../images/icon-mobile-menu.png) bottom center no-repeat;
+    width: 25px;
+    height: 25px
+}
+.jio-menu-expanded:before {
+    content: "";
+    background: url(../images/icon-mobile-menu.png) bottom center no-repeat
+}
+#jio-toggle {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background: #1688CC;
+    width: 100%;
+    height: 60px
+}
+#jio-toggle ul,
+#jio-toggle ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0
+}
+#jio-toggle ul {
+    margin-left: 54px;
+    opacity: 0
+}
+#jio-toggle ul.act-menu {
+    opacity: 1
+}
+#jio-toggle ul li {
+    display: inline-block
+}
+#jio-toggle ul li a {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 20px;
+    color: #fff
+}
+#jio-toggle ul li a:hover {
+    text-decoration: none
+}
+#jio-toggle ul.left-jio-menu {
+    float: left
+}
+#jio-toggle ul.right-jio-menu {
+    float: right
+}
+.no-info {
+    display: none
+}
+.n-jio-logo {
+    position: absolute;
+    width: 44px;
+    left: 50%;
+    top: 8px;
+    margin-left: -22px;
+    opacity: 0
+}
+.n-jio-logo.act-logo {
+    opacity: 1
+}
+@media(max-width:900px) {
+    .thumb .story {
+        top: 1px
+    }
+    .thumb .story .story-count {
+        font-size: 36px;
+        color: #FFF;
+        opacity: .7;
+        position: absolute;
+        top: 40%;
+        right: 10px;
+        display: none
+    }
+    #grid-lines .thumb .story h3 {
+        margin-left: 0!important
+    }
+}
+@media(max-width:768px) {
+    #startup-video-cont video {
+        height: 100%!important;
+        background-color: #218FC8
+    }
+    .thumb {
+        height: 16.66%;
+        width: 50%
+    }
+    .devider-grid .deviderV1 {
+        left: 50%
+    }
+    .devider-grid .deviderV2,
+    .devider-grid .deviderV3 {
+        display: none
+    }
+    .devider-grid .deviderH1 {
+        top: 16.66%
+    }
+    .devider-grid .deviderH2 {
+        top: 33.33%
+    }
+    .devider-grid .deviderH3 {
+        top: 49.98%
+    }
+    .devider-grid .deviderH4 {
+        top: 66.64%
+    }
+    .devider-grid .deviderH5 {
+        top: 83.3%
+    }
+    .devider-grid .deviderH6 {
+        top: 100%
+    }
+    .devider-grid .deviderH7 {
+        top: 87.5%;
+        display: none
+    }
+    .devider-grid .deviderH8 {
+        top: 100%;
+        display: none
+    }
+    .thumb .story {
+        top: 3px;
+        left: 1px
+    }
+}
+@media(max-width:900px) {
+    .story-img, .story-img-mob {
+        height: 100%
+    }
+    .flow-hidden,
+    .thumb {
+        height: 500px!important
+    }
+    .story-img {
+        display: none
+    }
+    .story-img-mob {
+        display: block
+    }
+    .devider-grid,
+    .thumb .content {
+        display: none
+    }
+    .thumb {
+        width: 100%;
+        opacity: 1
+    }
+    .thumb .story {
+        opacity: .9;
+        height: 25%;
+        left: 0;
+        top: auto;
+        position: absolute;
+        bottom: 0;
+        min-height: 125px
+    }
+    .flow-hidden-new .thumb .story {
+        bottom: 0
+    }
+    .thumb .story h3 {
+        opacity: 1;
+        margin-right: 0;
+        font-size: 20px
+    }
+    .thumb .story .inner-content div {
+        margin-top: 0
+    }
+    .story .img-thumb img {
+        opacity: 1
+    }
+    #grid-lines .owl-theme .owl-controls {
+        top: 50%;
+        position: absolute;
+        cursor: pointer;
+        width: 100%
+    }
+    #grid-lines .owl-theme .owl-controls .owl-nav [class*=owl-] {
+        font-size: 30px;
+        padding: 4px 15px 12px!important;
+        width: auto;
+        display: inline-block;
+        color: #fff;
+        background: rgba(0, 0, 0, .1)
+    }
+    #grid-lines .owl-theme .owl-controls .owl-nav [class*=owl-]:hover {
+        background: rgba(0, 0, 0, .9)
+    }
+    #grid-lines .owl-theme .owl-controls .owl-nav .owl-next {
+        float: right
+    }
+    #grid-lines {
+        pointer-events: auto!important
+    }
+    #grid-lines .thumb .story h3 {
+        left: 125px;
+        right: auto;
+        text-align: left
+    }
+    .thumb .story .inner-content {
+        left: 125px;
+        right: auto;
+        width: auto;
+        text-align: left
+    }
+    .story .img-thumb {
+        bottom: 30px
+    }
+    .story-img {
+        background-position: bottom center;
+        background-size: cover
+    }
+}

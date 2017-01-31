@@ -12,59 +12,78 @@
     <!-- Owl Stylesheets -->
     <link rel="stylesheet" href="assets/owlcarousel/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/owlcarousel/assets/owl.theme.default.min.css">
-    <style type="text/css">    
-        .gallery - effect.devider - grid.devider {
-            background - color: rgba(255, 255, 255, .2);
-            position: absolute;
-            z - index: 14
-        }
-        .gallery - effect.devider - grid.deviderV {
-            top: 0;
-            bottom: 0;
-            width: 1 px
-        }
-        .gallery - effect.devider - grid.deviderV1 {
-            left: 25 %
-        }
-        .gallery - effect.devider - grid.deviderV2 {
-            left: 50 %
-        }
-        .gallery - effect.devider - grid.deviderV3 {
-            left: 75 %
-        }
-        .gallery - effect.devider - grid.deviderH {
-            left: 0;
-            right: 0;
-            height: 1 px
-        }
-        .gallery - effect.devider - grid.deviderH1 {
-            top: 25 %
-        }
-        .gallery - effect.devider - grid.deviderH2 {
-            top: 50 %
-        }
-        .gallery - effect.devider - grid.deviderH3 {
-            top: 75 %
-        }
-    </style>
+    <link rel="stylesheet" href="kautil_files/blog_style.css">
 </head>
 <body>
 	<h2 >echo "Hello!"</h2>
-	<div class="container-fluid">
+    <div class="container">
+	<div class="jumbotron">
 		<div class="devider-grid">
             <div class="devider deviderV deviderV1"></div>
             <div class="devider deviderV deviderV2"></div>
             <div class="devider deviderH deviderH1"></div>
-            <div class="devider deviderH deviderH2"></div>
-            <div class="devider deviderH deviderH3"></div>
-            <div class="devider deviderH deviderH4"></div>
-            <div class="devider deviderH deviderH5"></div>
-            <div class="devider deviderH deviderH6"></div>
-            <div class="devider deviderH deviderH7"></div>
-            <div class="devider deviderH deviderH8"></div>
         </div>
-	</div>
+        <div class="story-img" id="thumb1" >
+        </div>
+        <div class="story-img" id="thumb2" >
+        </div>
+        <div class="story-img" id="thumb3" >
+        </div>
+        <div class="story-img" id="thumb4" >
+        </div>
+        <div class="story-img" id="thumb5" >
+        </div>
+        <div class="story-img" id="thumb6" >
+        </div>
+        <div id="grid-lines" class="row" style="height:100%">
+            <div class="gallery-tile owl-carousel">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 thumb item" onmouseover="javascript:showanyproduct('thumb1')">
+                </div>
+            </div>
+
+            <div class="gallery-tile owl-carousel">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 thumb item" onmouseover="javascript:showanyproduct('thumb2')">
+                </div>
+            </div>
+
+            <div class="gallery-tile owl-carousel">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 thumb item" onmouseover="javascript:showanyproduct('thumb3')">
+                </div>
+            </div>
+
+            <div class="gallery-tile owl-carousel">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 thumb item" onmouseover="javascript:showanyproduct('thumb4')">
+                </div>
+            </div>
+
+            <div class="gallery-tile owl-carousel">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 thumb item" onmouseover="javascript:showanyproduct('thumb5')">
+                </div>
+            </div>
+
+            <div class="gallery-tile owl-carousel">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 thumb item" onmouseover="javascript:showanyproduct('thumb6')">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
     <script src="assets/vendors/jquery.min.js"></script>
     <script src="assets/owlcarousel/owl.carousel.js"></script>
+    <script>
+        /*if ($(window).width() > 1030) {
+            function showanyproduct(onlynoneproduct) {
+                $('.story-img').each(function(index) {
+                    if ($(this).attr("id") == onlynoneproduct) {
+                        $(this).stop().fadeIn();
+                        $(this).addClass("active");
+                    } else {
+                        $(this).stop().fadeOut();
+                        $(this).removeClass("active");
+                    }
+                });
+            };
+        };*/
+    </script>
 </body>
 </html>
