@@ -1,0 +1,175 @@
+.grid{
+    height: 100%;
+    background-color: #334
+}
+#grid-lines{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.helloheader{
+    text-align: center;
+    color: #58585b !important;
+    font-size: 4vh !important;
+    margin-bottom: 0.2em !important;
+    font-size: 30px;
+    margin-top: 10px;
+}
+.main-container{
+    overflow: hidden;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 90vh;
+    top: 0;
+}
+.devider-grid {
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out
+}
+.devider-grid .devider {
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    z-index: 14
+}
+.devider-grid .deviderV {
+    top: 0;
+    bottom: 0;
+    width: 1px
+}
+.devider-grid .deviderV1 {
+    left: 33.33%
+}
+.devider-grid .deviderV2 {
+    left: 66.66%
+}
+.devider-grid .deviderH {
+    left: 0;
+    right: 0;
+    height: 1px
+}
+.devider-grid .deviderH1 {
+    top: 50%
+}
+.devider-grid .deviderH2{
+    top: 66%;
+    visibility: hidden
+}
+
+.devider-grid .deviderV1.mobile{
+    left: 50%
+}
+.devider-grid .deviderV2.mobile{
+    visibility: hidden;
+}
+.devider-grid .deviderH1.mobile{
+    top: 33.33%
+}
+.devider-grid .deviderH2.mobile{
+    top: 66.66%;
+    visibility: visible
+}
+
+.thumb {
+    margin: 0;
+    padding: 0;
+    height: 50%;
+    width: 33.33%
+}
+.thumb.mobile {
+    margin: 0;
+    padding: 0;
+    height: 33.33%;
+    width: 50%
+}
+.flow-hidden {
+    height: 100vh
+}
+.story-img,
+.story-img-mob {
+    display: none;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #333;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+.story-img img {
+    top: 0;
+    margin: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%
+}
+.story-img {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transition: transform .5s ease-out;
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+    -moz-transition: -moz-transform .5s ease-in-out;
+    -o-transition: -o-transform .5s ease-in-out
+}
+.story-img.active {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    display: block
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+        width: 110%
+    }
+    to {
+        opacity: 1;
+        width: 100%
+    }
+}
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+        width: 110%
+    }
+    to {
+        opacity: 1;
+        width: 100%
+    }
+}
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+        width: 110%
+    }
+    to {
+        opacity: 1;
+        width: 100%
+    }
+}
+@-o-keyframes fadein {
+    from {
+        opacity: 0;
+        width: 110%
+    }
+    to {
+        opacity: 1;
+        width: 100%
+    }
+}
+#grid-lines .owl-carousel {
+    display: block;
+    height: 100%
+}
