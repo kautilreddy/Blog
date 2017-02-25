@@ -29,7 +29,7 @@
     transition: all 1s ease-in-out
 }
 .devider-grid .devider {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.35);
     position: absolute;
     z-index: 14
 }
@@ -169,7 +169,7 @@
         width: 100%
     }
 }
-#grid-lines .owl-carousel {
+.gallery-tile{
     display: block;
     height: 100%
 }

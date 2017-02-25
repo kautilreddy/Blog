@@ -22,6 +22,12 @@ function addMobileClass(){
     $(".thumb").each(function(){
         $(this).addClass(mobileClassText);
     });
+    $('.story-img').each(function(index) {
+        var imgUrl = "url(backgrounds/"+$(this).attr('name')+"m.jpg)";
+        console.log($(this));
+        console.log(imgUrl);
+        $(this).css('background-image',imgUrl);
+    });
 }
 function removeMobileClass(){
     $(".devider").each(function(){
@@ -29,6 +35,10 @@ function removeMobileClass(){
     });
     $(".thumb").each(function(){
         $(this).removeClass(mobileClassText);
+    });
+    $('.story-img').each(function(index) {
+        var imgUrl = "url(backgrounds/"+$(this).attr('name')+".jpg)";
+        $(this).css('background-image',imgUrl);
     });
 }
 function setViewAndImages(){
