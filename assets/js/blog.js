@@ -1,10 +1,10 @@
 function showimage(imgId) {
     $('.story-img').each(function(index) {
         if ($(this).attr("id") == imgId) {
-            $(this).stop().fadeIn();
+            $(this).stop().fadeTo(400,1);
             $(this).addClass("active");
         } else {
-            $(this).stop().fadeOut();
+            $(this).stop().fadeTo(400,0);
             $(this).removeClass("active");
         }
     });

@@ -123,6 +123,7 @@ html {
 .story-img-mob {
     display: none;
     position: absolute;
+    opacity: 1;
     top: 0;
     margin: 0;
     bottom: 0;
@@ -162,46 +163,7 @@ html {
     -ms-transform: scale(1);
     display: block
 }
-@keyframes fadein {
-    from {
-        opacity: 0;
-        width: 110%
-    }
-    to {
-        opacity: 1;
-        width: 100%
-    }
-}
-@-moz-keyframes fadein {
-    from {
-        opacity: 0;
-        width: 110%
-    }
-    to {
-        opacity: 1;
-        width: 100%
-    }
-}
-@-webkit-keyframes fadein {
-    from {
-        opacity: 0;
-        width: 110%
-    }
-    to {
-        opacity: 1;
-        width: 100%
-    }
-}
-@-o-keyframes fadein {
-    from {
-        opacity: 0;
-        width: 110%
-    }
-    to {
-        opacity: 1;
-        width: 100%
-    }
-}
+
 .blinking-cursor {
     animation: 1s blink step-end infinite;
     -webkit-animation: 1s blink step-end infinite;
