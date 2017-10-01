@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kautil.Gallery()</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/blog_style.css">
+    <!-- Photo swipe CSS -->
+    <link rel="stylesheet" href="assets/css/photoswipe.css">
+    <link rel="stylesheet" href="assets/css/default-skin/default-skin.css"> 
+
+    <style type="text/css">
+    .grid-item {
+        width:33%; /* you can use % */
+        height: auto;
+        padding-bottom: 5px
+    }
+    .layout{
+        max-width: 80em;
+        margin: 30px auto;
+    }
+    @media screen and (max-width: 900px) {
+        .grid-item {
+            width: 49.4%;
+        }
+
+        .layout{
+            width: auto;
+            right: 0px;
+            left: 0px
+        }
+    }
+
+    @media screen and (max-width: 340px) {
+        .grid-item {
+            width: 49.2%;
+        }
+
+        .layout{
+            width: 300px;
+            right: 0px;
+            left: 0px
+        }
+    }
+    </style>
+<!-- Photo swipe JS -->
+<script src="assets/js/photoswipe.min.js"></script> 
+<!-- UI JS file -->
+<script src="assets/js/photoswipe-ui-default.min.js"></script> 
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+</head>
+<body>
+	<h3 class="helloheader">MacBook-Pro:~ KAUTIL$ echo 'Hello!'<span class="blinking-cursor">&#x275a;</span> </h3>
+    <div class="layout">
+     	<img class="grid-item" src="backgrounds/1.jpg" data-src="backgrounds/1.jpg" data-h="1132" data-w="2482"/>
+    	<img class="grid-item" src="backgrounds/1m.jpg" data-src="backgrounds/1m.jpg" data-h="1132" data-w="636"/>
+    	<img class="grid-item" src="backgrounds/2.jpg" data-src="backgrounds/2.jpg" data-h="2732" data-w="6000"/>
+    	<img class="grid-item" src="backgrounds/2m.jpg" data-src="backgrounds/2m.jpg" data-h="6000" data-w="4000"/>
+    	<img class="grid-item" src="backgrounds/3.jpg" data-src="backgrounds/3.jpg" data-h="1132" data-w="2482"/>
+    	<img class="grid-item" src="backgrounds/3m.jpg" data-src="backgrounds/3m.jpg" data-h="2841" data-w="1597"/>
+    	<img class="grid-item" src="backgrounds/4.jpg" data-src="backgrounds/4.jpg" data-h="1141" data-w="2482"/>
+    	<img class="grid-item" src="backgrounds/4m.jpg" data-src="backgrounds/4m.jpg" data-h="3892" data-w="2857"/>
+    	<img class="grid-item" src="backgrounds/5.jpg" data-src="backgrounds/5.jpg" data-h="692" data-w="1532"/>
+    	<img class="grid-item" src="backgrounds/5m.jpg" data-src="backgrounds/5m.jpg" data-h="1100" data-w="620"/>
+    	<img class="grid-item" src="backgrounds/6.jpg" data-src="backgrounds/6.jpg" data-h="1825" data-w="4000"/>
+    	<img class="grid-item" src="backgrounds/6m.jpg" data-src="backgrounds/6m.jpg" data-h="4000" data-w="2259"/> 
+    </div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+     It's a separate element as animating opacity is faster than rgba(). -->
+     <div class="pswp__bg"></div>
+
+     <!-- Slides wrapper with overflow:hidden. -->
+     <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+
+                <div class="pswp__top-bar">
+
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+
+                    <div class="pswp__counter"></div>
+
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                    <!-- element will get class pswp__preloader-active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                          <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<script src="assets/js/gallery.js"></script> 
+</body>
+</html>
