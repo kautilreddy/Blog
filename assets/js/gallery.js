@@ -62,11 +62,15 @@
 ];
 var openPhotoSwipe = function(index) {
     var pswpElement = document.querySelectorAll('.pswp')[0];
-    // define options (if needed)
     var options = {
         index: parseInt(index),
-        showAnimationDuration: 0,
-        hideAnimationDuration: 0
+        getThumbBoundsFn: function(index) {
+            //See http://photoswipe.com/documentation/options.html#getThumbBoudnsFn
+            var thumbnail = images[index].el;
+            var pageYScroll = window.pageYOffset || document.documentElement.scrollTop; 
+            var rect = thumbnail.getBoundingClientRect(); 
+            return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
+        }
         
     };
     
@@ -83,7 +87,8 @@ $( document ).ready(function() {
         var data = {
             src:item.dataset.src,
             h:parseInt(item.dataset.h),
-            w:parseInt(item.dataset.w)
+            w:parseInt(item.dataset.w),
+            el:item
         };
         item.dataset.index = index;
         images.push(data);
