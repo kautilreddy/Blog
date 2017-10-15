@@ -64,6 +64,8 @@ var openPhotoSwipe = function(index) {
     var pswpElement = document.querySelectorAll('.pswp')[0];
     var options = {
         index: parseInt(index),
+        showAnimationDuration: 300,
+        hideAnimationDuration: 300,
         getThumbBoundsFn: function(index) {
             //See http://photoswipe.com/documentation/options.html#getThumbBoudnsFn
             var thumbnail = images[index].el;
