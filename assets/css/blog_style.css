@@ -88,7 +88,7 @@ html {
 }
 
 .thumb .story {
-    opacity: 0;
+    opacity: 1;
     width: 100%;
     height: 100.1%;
     -webkit-transition: all 0.5s;
@@ -103,7 +103,12 @@ html {
     padding: 20px
 }
 .story h1{
-    
+    font-family: "ProggySquare";
+    color: #ffffff !important;
+    font-size: 4vh !important;
+    position: absolute;
+    bottom: 3%;
+    right: 3%
 }
 
 .thumb {
