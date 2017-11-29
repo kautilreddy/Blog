@@ -21,7 +21,7 @@ html {
     font-family: "ProggySquare";
     text-align: center;
     color: #000000 !important;
-    font-size: 4vh !important;
+    font-size: 3.2vh !important;
     margin-bottom: 0.2em !important;
     margin-top: 10px
 }
@@ -83,8 +83,7 @@ html {
 }
 
 .thumb:hover .story {
-    background-color: rgba(0, 0, 0, 1);
-    opacity: .35
+    background-color: rgba(0, 0, 0, 0.35);
 }
 
 .thumb .story {
@@ -105,7 +104,7 @@ html {
 .story h1{
     font-family: "ProggySquare";
     color: #ffffff !important;
-    font-size: 4vh !important;
+    font-size: 3.5vh !important;
     position: absolute;
     bottom: 3%;
     right: 3%
