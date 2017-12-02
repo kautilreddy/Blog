@@ -98,8 +98,10 @@ $( document ).ready(function() {
     $('.grid-item').click(function(){
         openPhotoSwipe(this.dataset.index);
     });
-    $layoutDiv.masonry({
-        gutter: 5,
-        itemSelector: '.grid-item'
+    $layoutDiv.imagesLoaded( function() {
+            $layoutDiv.masonry({
+                gutter: 5,
+                itemSelector: '.grid-item'
+            });
     });
 });
