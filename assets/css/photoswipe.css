@@ -111,6 +111,7 @@
 
 .pswp__bg {
   will-change: opacity;
+  background-color: #ffffff;
   /* for open/close transition */
   -webkit-transition: opacity 333ms cubic-bezier(0.4, 0, 0.22, 1);
           transition: opacity 333ms cubic-bezier(0.4, 0, 0.22, 1); }
