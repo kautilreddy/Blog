@@ -84,9 +84,11 @@ html {
 
 .thumb:hover .story {
     background-color: rgba(0, 0, 0, 0.35);
+    display: block;
 }
 
 .thumb .story {
+	display: none;
     opacity: 1;
     width: 100%;
     height: 100.1%;
@@ -101,13 +103,15 @@ html {
     overflow: hidden;
     padding: 20px
 }
-.story h1{
-    font-family: "ProggySquare";
-    color: #ffffff !important;
+.title{
     font-size: 3.5vh !important;
     position: absolute;
     bottom: 3%;
     right: 3%
+}
+.proggyfont{
+    font-family: "ProggySquare";
+    color: #ffffff !important;
 }
 
 .thumb {
@@ -194,3 +198,26 @@ html {
     display: block;
     height: 100%
 }
+.story h2{
+    font-size: 4.5vh !important;
+}
+.mobile h2{
+	font-size: 3vh !important;
+}
+.slinks{
+    text-decoration : none;
+	color: #ffffff;
+}
+a.slinks i{
+	padding-right: 10px;
+}
+.slinks span{
+    font-size: 3vh !important;
+}
+.slinks:hover{
+    color: inherit;
+}
+div.mobile a.slinks span{
+	display: none;
+}
+div.mobile a.slinks br{ content: ' '; }
