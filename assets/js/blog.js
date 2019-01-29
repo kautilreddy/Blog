@@ -1,4 +1,9 @@
+var initialDisplay = true;
 function showimage(imgId) {
+    if(initialDisplay){
+        initialDisplay=false;
+        $('#about').removeClass('initial');
+    }
     $('.story-img').each(function(index) {
         if ($(this).attr("id") == imgId) {
             $(this).stop().fadeTo(400,1);

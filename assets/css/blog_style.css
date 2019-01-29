@@ -87,6 +87,14 @@ html {
     display: block;
 }
 
+.initial{
+    background-color: rgba(0, 0, 0, 0.35);
+    display: block;
+}
+.initial .story{
+    display: block !important
+}
+
 .thumb .story {
 	display: none;
     opacity: 1;
