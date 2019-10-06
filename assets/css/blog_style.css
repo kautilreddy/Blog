@@ -210,7 +210,14 @@ html {
     font-size: 4.5vh !important;
 }
 .mobile h2{
-	font-size: 3vh !important;
+	font-size: 2vh !important;
+}
+.mobile .story{
+    padding-top: 10px;
+    padding-right: 10px;
+}
+#email{
+    color: #ffffff;
 }
 .slinks{
     text-decoration : none;
@@ -220,10 +227,12 @@ a.slinks i{
 	padding-right: 10px;
 }
 .slinks span{
+    font-family: "ProggySquare";
+    margin-right: 0.3em;
     font-size: 4vh !important;
 }
 .slinks:hover{
-    color: inherit;
+    color: #ffffff;
 }
 div.mobile a.slinks span{
 	display: none;
