@@ -109,7 +109,8 @@ html {
     left: 1px;
     cursor: pointer;
     overflow: hidden;
-    padding: 20px
+    padding: 20px;
+    word-wrap: break-word;
 }
 .title{
     font-size: 3.5vh !important;
@@ -207,6 +208,7 @@ html {
     height: 100%
 }
 .story h2{
+    margin-top: 1vh;
     font-size: 4.5vh !important;
 }
 .mobile h2{
@@ -214,7 +216,7 @@ html {
 }
 .mobile .story{
     padding-top: 10px;
-    padding-right: 10px;
+    padding-left: 10px;
 }
 #email{
     color: #ffffff;
