@@ -1,4 +1,4 @@
 # Blog
 Personal blog
 
-visit http://kautilreddy.me
+visit https://kautilreddy.me
