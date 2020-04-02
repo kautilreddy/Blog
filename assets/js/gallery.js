@@ -1,65 +1,4 @@
-  var images = [
- //        {
- //            src: 'backgrounds/1.jpg',
- //            w: 2482,
- //            h: 1132
- //        },
- //        {
- //            src: 'backgrounds/2.jpg',
- //            w: 6000,
- //            h: 2732
- //        },
- //        {
- //            src: 'backgrounds/3.jpg',
- //            w: 2482,
- //            h: 1132
- //        },
- //        {
- //            src: 'backgrounds/4.jpg',
- //            w: 2482,
- //            h: 1141
- //        },
- //        {
- //            src: 'backgrounds/5.jpg',
- //            w: 1532,
- //            h: 692
- //        },
- //        {
- //            src: 'backgrounds/6.jpg',
- //            w: 4000,
- //            h: 1825
- //        },
- //        {
- //            src: 'backgrounds/1m.jpg',
- //            w: 636,
- //            h: 1132
- //        },
- //        {
- //            src: 'backgrounds/2m.jpg',
- //            w: 4000,
- //            h: 6000
- //        },
- //        {
- //            src: 'backgrounds/3m.jpg',
- //            w: 1597,
- //            h: 2841
- //        },
- //        {
- //            src: 'backgrounds/4m.jpg',
- //            w: 2857,
- //            h: 3892
- //        },
- //        {
- //            src: 'backgrounds/5m.jpg',
- //            w: 620,
- //            h: 1100
- //        },
- //        {
- //            src: 'backgrounds/6m.jpg',
- //            w: 2259,
- //            h: 4000
- //        }
-];
+var images = [];
 var openPhotoSwipe = function(index) {
     var pswpElement = document.querySelectorAll('.pswp')[0];
     var options = {
@@ -81,27 +20,54 @@ var openPhotoSwipe = function(index) {
 
 };
 
-$( document ).ready(function() {
-    //initializing masonry
-    var $layoutDiv = $('.layout');
+function getGridItemWidthPercent(){
+    if(window.matchMedia('(max-width: 900px)').matches){
+        return 0.494;
+    }else if(window.matchMedia('(max-width: 340px)').matches){
+        return 0.492;
+    }else{
+        return 0.3333333;
+    }
+}
 
+var $layoutDiv = $('.layout');
+var layoutDivWidth = $layoutDiv.width();
+$( document ).ready(function() {
+    var loadedImages = [];
+    //initializing masonry
     $.each($('.grid-item'),function(index,item){
+        $img = $(item).children('img')[0];
         var data = {
-            src:item.dataset.src,
-            h:parseInt(item.dataset.h),
-            w:parseInt(item.dataset.w),
-            el:item
+            src:$img.dataset.original,
+            h:parseInt($img.dataset.h),
+            w:parseInt($img.dataset.w),
+            el:$img
         };
+        var ratio = data.h/data.w;
         item.dataset.index = index;
         images.push(data);
+        item.style.setProperty('--aspect-ratio',ratio);
+    });
+    const observer = lozad('.grid-item img',{
+        // load: function(el) {
+        //     el.src = el.dataset.src;
+        // },
+        loaded:function(element){
+            loadedImages.push(element);
+            $(element).css('height','auto');
+        }
+    }).observe();
+
+    $layoutDiv.imagesLoaded().progress(function() {
+        // $.each(loadedImages, function(index, item){
+        //     $(item).height('auto');
+        // });
+        $layoutDiv.masonry({
+            gutter: 5,
+            itemSelector: '.grid-item'
+        });
     });
     $('.grid-item').click(function(){
         openPhotoSwipe(this.dataset.index);
-    });
-    $layoutDiv.imagesLoaded( function() {
-            $layoutDiv.masonry({
-                gutter: 5,
-                itemSelector: '.grid-item'
-            });
     });
 });

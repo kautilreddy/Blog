@@ -14,9 +14,18 @@
 
     <style type="text/css">
     .grid-item {
-        width:33%; /* you can use % */
+        width: 33%;
         height: auto;
-        padding-bottom: 5px
+        overflow: hidden;
+        margin-bottom: 5px;
+        padding-bottom: calc(33% * (var(--aspect-ratio)));
+    }
+    .grid-item img{
+        position: absolute; 
+        top: 0; 
+        left: 0;
+        width: 100%;
+        height: 0;
     }
     .layout{
         max-width: 80em;
@@ -25,6 +34,8 @@
     @media screen and (max-width: 900px) {
         .grid-item {
             width: 49.4%;
+            padding-bottom: calc(49.4% * (var(--aspect-ratio)));
+
         }
 
         .layout{
@@ -37,6 +48,7 @@
     @media screen and (max-width: 340px) {
         .grid-item {
             width: 49.2%;
+            padding-bottom: calc(49.2% * (var(--aspect-ratio)));
         }
 
         .layout{
@@ -58,73 +70,91 @@
 <body>
 	<h3 class="helloheader">MacBook-Pro:~ KAUTIL$ echo 'Hello!'<span class="blinking-cursor">&#x275a;</span> </h3>
     <div class="layout">
-     	<img class="grid-item" src="http://drive.google.com/uc?export=view&id=1BedDXUaFtNciwF0UA-lAGs-iwEWdbq1B" data-src="http://drive.google.com/uc?export=view&id=1eDU_VS60WD0KCbb8XhNltZClFAmOq24X" data-h="4030" data-w="2266"/>
+     	<div class="grid-item">
+            <img src="http://drive.google.com/uc?export=view&id=1BedDXUaFtNciwF0UA-lAGs-iwEWdbq1B" data-original="http://drive.google.com/uc?export=view&id=1eDU_VS60WD0KCbb8XhNltZClFAmOq24X" data-h="4030" data-w="2266"/> 
+        </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1kbr8E01fDwCigR4SNFvwF1OC6uHDiCjC" data-src="http://drive.google.com/uc?export=view&id=1f2PlJ-oAVkn6vkCchQgzWSEhqb9-8mEJ" data-h="4000" data-w="6000"/>
+        <div class="grid-item">
+            <img src="http://drive.google.com/uc?export=view&id=1kbr8E01fDwCigR4SNFvwF1OC6uHDiCjC" data-original="http://drive.google.com/uc?export=view&id=1f2PlJ-oAVkn6vkCchQgzWSEhqb9-8mEJ" data-h="4000" data-w="6000"/> 
+        </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=19y76oMEJBTZtyWTgquOyvfpeOfI-e34j" data-src="http://drive.google.com/uc?export=view&id=1XHSfzNmTpTKQ0j913ss3Z_pGLbGP8AWI" data-h="4000" data-w="6000"/>
+        <div class="grid-item">
+            <img src="http://drive.google.com/uc?export=view&id=19y76oMEJBTZtyWTgquOyvfpeOfI-e34j" data-original="http://drive.google.com/uc?export=view&id=1XHSfzNmTpTKQ0j913ss3Z_pGLbGP8AWI" data-h="4000" data-w="6000"/> 
+        </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1sTMPz8GxK1pdV7qeVcECVZziqOo9ozrR" data-src="http://drive.google.com/uc?export=view&id=1DblvNCz7Fz61o7d1b5mUEtnvgiUZYCZb" data-h="2903" data-w="4352"/>
+        <div class="grid-item">
+            <img src="http://drive.google.com/uc?export=view&id=1sTMPz8GxK1pdV7qeVcECVZziqOo9ozrR" data-original="http://drive.google.com/uc?export=view&id=1DblvNCz7Fz61o7d1b5mUEtnvgiUZYCZb" data-h="2903" data-w="4352"/> 
+        </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1E8b1Td6KrknT_OlMJ8CxI_EyKkvfI4VB" data-src="http://drive.google.com/uc?export=view&id=1RrCvY_xrQwMS4vUNWcIgck46JdH31E5S" data-h="2946" data-w="5874"/>
+        <div class="grid-item">
+            <img src="http://drive.google.com/uc?export=view&id=1E8b1Td6KrknT_OlMJ8CxI_EyKkvfI4VB" data-original="http://drive.google.com/uc?export=view&id=1RrCvY_xrQwMS4vUNWcIgck46JdH31E5S" data-h="2946" data-w="5874"/> 
+        </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1vSFkxenABS4dBSi5pYFsW3HF5bt5xmTx" data-src="http://drive.google.com/uc?export=view&id=17_B77PNAMw4OzEHTGCfpL-QTccFA0uLa" data-h="2317" data-w="5229"/>
+        <div class="grid-item">
+            <img src="http://drive.google.com/uc?export=view&id=1vSFkxenABS4dBSi5pYFsW3HF5bt5xmTx" data-original="http://drive.google.com/uc?export=view&id=17_B77PNAMw4OzEHTGCfpL-QTccFA0uLa" data-h="2317" data-w="5229"/> 
+        </div>
         
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=18R-fI27MxO_3W_DCrL-f_YLwnl4l6euY" data-src="http://drive.google.com/uc?export=view&id=1GuCdwHAwPg3K74PljIQG69qhGVsfrC45" data-h="4000" data-w="6000"/>
+        <div class="grid-item">
+            <img src="http://drive.google.com/uc?export=view&id=18R-fI27MxO_3W_DCrL-f_YLwnl4l6euY" data-original="http://drive.google.com/uc?export=view&id=1GuCdwHAwPg3K74PljIQG69qhGVsfrC45" data-h="4000" data-w="6000"/>
+        </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1zf4Rh_CWprhkHzLGKB0ZmJGqBXqMUbQi" data-src="http://drive.google.com/uc?export=view&id=13VxIacdLEDmB3ztkegeIBWmDygwNR18M" data-h="4000" data-w="6000"/>
+        <div class="grid-item">
+            <img src="http://drive.google.com/uc?export=view&id=1zf4Rh_CWprhkHzLGKB0ZmJGqBXqMUbQi" data-original="http://drive.google.com/uc?export=view&id=13VxIacdLEDmB3ztkegeIBWmDygwNR18M" data-h="4000" data-w="6000"/>
+        </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1aXWHBpXJAJUHgR81m7nL4HQYNCx8IgVe" data-src="http://drive.google.com/uc?export=view&id=1Pz0kHtdzsMlGJkobSHH6c-uBI3tlMHA8" data-h="2770" data-w="3603"/>
+        <div class="grid-item">
+            <img class="lazy-load" data-src="http://drive.google.com/uc?export=view&id=1aXWHBpXJAJUHgR81m7nL4HQYNCx8IgVe" data-original="http://drive.google.com/uc?export=view&id=1Pz0kHtdzsMlGJkobSHH6c-uBI3tlMHA8" data-h="2770" data-w="3603"/>
+        </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1CDbfPYykWBg2-TdL6C_sLF0rz6oa6nfZ" data-src="http://drive.google.com/uc?export=view&id=16iCnigy9RbXeP-alwy4I7zX3BKgUSrX0" data-h="5776" data-w="3251"/>
+        <div class="grid-item"><img class="lazy-load" data-src="http://drive.google.com/uc?export=view&id=1CDbfPYykWBg2-TdL6C_sLF0rz6oa6nfZ" data-original="http://drive.google.com/uc?export=view&id=16iCnigy9RbXeP-alwy4I7zX3BKgUSrX0" data-h="5776" data-w="3251"/> </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1C7sWbizPCWMom2o1yBQbRbyUQ3DNE9nx" data-src="http://drive.google.com/uc?export=view&id=1ISNgzS-2j2nk-cDoSz0I8-JWk1o0FWvP" data-h="3999" data-w="6000"/>
+        <div class="grid-item"><img class="lazy-load" data-src="http://drive.google.com/uc?export=view&id=1C7sWbizPCWMom2o1yBQbRbyUQ3DNE9nx" data-original="http://drive.google.com/uc?export=view&id=1ISNgzS-2j2nk-cDoSz0I8-JWk1o0FWvP" data-h="3999" data-w="6000"/> </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1m4xKIvgnpLb0EsnxdBXkgCnmJ86wqhAi" data-src="http://drive.google.com/uc?export=view&id=1CcL-4AQv2GnnT7bVPMWqojfgVOkY3Kd6" data-h="4000" data-w="6000"/>
+        <div class="grid-item"><img class="lazy-load" data-src="http://drive.google.com/uc?export=view&id=1m4xKIvgnpLb0EsnxdBXkgCnmJ86wqhAi" data-original="http://drive.google.com/uc?export=view&id=1CcL-4AQv2GnnT7bVPMWqojfgVOkY3Kd6" data-h="4000" data-w="6000"/> </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=10UwDBeHbHQKnEul4KJPPXhUPjLbYKDW3" data-src="http://drive.google.com/uc?export=view&id=1pZkyUmqZcWogOKk9o5GHwYyUpER-pJbH" data-h="6000" data-w="4000"/>
+        <div class="grid-item"><img class="lazy-load" data-src="http://drive.google.com/uc?export=view&id=10UwDBeHbHQKnEul4KJPPXhUPjLbYKDW3" data-original="http://drive.google.com/uc?export=view&id=1pZkyUmqZcWogOKk9o5GHwYyUpER-pJbH" data-h="6000" data-w="4000"/> </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1po8xgoKavasKA953LNNelbTKKfTouVZS" data-src="http://drive.google.com/uc?export=view&id=1sJEmQUP6QUUSxV9GpV264AtGZYFgANXI" data-h="4000" data-w="6000"/>
+        <div class="grid-item"><img class="lazy-load" data-src="http://drive.google.com/uc?export=view&id=1po8xgoKavasKA953LNNelbTKKfTouVZS" data-original="http://drive.google.com/uc?export=view&id=1sJEmQUP6QUUSxV9GpV264AtGZYFgANXI" data-h="4000" data-w="6000"/> </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1Xa09JT6o5r_yfQY41LddmcG4UVEf5cfP" data-src="http://drive.google.com/uc?export=view&id=1jAKbjcka8eO5o3P_POmQ4hJMX7r2Lhgl" data-h="3613" data-w="5948"/>
+        <div class="grid-item"><img class="lazy-load" data-src="http://drive.google.com/uc?export=view&id=1Xa09JT6o5r_yfQY41LddmcG4UVEf5cfP" data-original="http://drive.google.com/uc?export=view&id=1jAKbjcka8eO5o3P_POmQ4hJMX7r2Lhgl" data-h="3613" data-w="5948"/> </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1zYfAU5WIfWblVlwbFuINRzgVGhbZ9s3p" data-src="http://drive.google.com/uc?export=view&id=1YX8SAn-CxNmw66A4PLzBm-v6ekiygZFL" data-h="6000" data-w="4000"/>
+        <div class="grid-item"><img class="lazy-load" data-src="http://drive.google.com/uc?export=view&id=1zYfAU5WIfWblVlwbFuINRzgVGhbZ9s3p" data-original="http://drive.google.com/uc?export=view&id=1YX8SAn-CxNmw66A4PLzBm-v6ekiygZFL" data-h="6000" data-w="4000"/> </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1qM6juYuSc9onbjXE9BqGkcckvA1EsF3w" data-src="http://drive.google.com/uc?export=view&id=1Zmh1azdpsCV39iXxieNIe_zpwqpQ5k4e" data-h="3435" data-w="5999"/>
+        <div class="grid-item"><img class="lazy-load" data-src="http://drive.google.com/uc?export=view&id=1qM6juYuSc9onbjXE9BqGkcckvA1EsF3w" data-original="http://drive.google.com/uc?export=view&id=1Zmh1azdpsCV39iXxieNIe_zpwqpQ5k4e" data-h="3435" data-w="5999"/> </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1dbFmujlBpD0goS0sW4ZBp0C9NWU02D-1" data-src="http://drive.google.com/uc?export=view&id=184byNTG6R3ezKg0f6zbBDfP2TFOzvXFe" data-h="3920" data-w="5878"/>
+        <div class="grid-item"><img class="lazy-load" data-src="http://drive.google.com/uc?export=view&id=1dbFmujlBpD0goS0sW4ZBp0C9NWU02D-1" data-original="http://drive.google.com/uc?export=view&id=184byNTG6R3ezKg0f6zbBDfP2TFOzvXFe" data-h="3920" data-w="5878"/> </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1T1CrCymPG1bnc6V3JQ9BALLV6fqlPPkQ" data-src="http://drive.google.com/uc?export=view&id=1CxQsl0pJTHIzIWHnuCPJ0O5KhbwTXY8l" data-h="4000" data-w="6000"/>
+        <div class="grid-item"><img class="lazy-load" data-src="http://drive.google.com/uc?export=view&id=1T1CrCymPG1bnc6V3JQ9BALLV6fqlPPkQ" data-original="http://drive.google.com/uc?export=view&id=1CxQsl0pJTHIzIWHnuCPJ0O5KhbwTXY8l" data-h="4000" data-w="6000"/> </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1i53jNk1QpALTT5Pbv-6oQc0W2c_rN3-I" data-src="http://drive.google.com/uc?export=view&id=13x80O9n2UfBKeSmL_5t4HcwhjcdM-yf8" data-h="3265" data-w="5702"/>
+        <div class="grid-item"><img class="lazy-load" data-src="http://drive.google.com/uc?export=view&id=1i53jNk1QpALTT5Pbv-6oQc0W2c_rN3-I" data-original="http://drive.google.com/uc?export=view&id=13x80O9n2UfBKeSmL_5t4HcwhjcdM-yf8" data-h="3265" data-w="5702"/> </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1JBs3lx7-TTgYf-1NYV6x-sMq6qSJEbGT" data-src="http://drive.google.com/uc?export=view&id=1SUs-gvJJVq3qdBWm4VIcnW06UzxQjs1A" data-h="4769" data-w="3907"/>
+        <div class="grid-item"><img class="lazy-load" data-src="http://drive.google.com/uc?export=view&id=1JBs3lx7-TTgYf-1NYV6x-sMq6qSJEbGT" data-original="http://drive.google.com/uc?export=view&id=1SUs-gvJJVq3qdBWm4VIcnW06UzxQjs1A" data-h="4769" data-w="3907"/> </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1CosZxKISlcC-amZDfLwRNoX9tEdKSOy-" data-src="http://drive.google.com/uc?export=view&id=1dx1YolsQxQkPdCiyT5uRdmxzORBd3S8V" data-h="3677" data-w="5563"/>
+        <div class="grid-item"><img class="lazy-load" data-src="http://drive.google.com/uc?export=view&id=1CosZxKISlcC-amZDfLwRNoX9tEdKSOy-" data-original="http://drive.google.com/uc?export=view&id=1dx1YolsQxQkPdCiyT5uRdmxzORBd3S8V" data-h="3677" data-w="5563"/> </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=13xJMxgZoxQeYujCGPcn0uq4O-Gz9cay7" data-src="http://drive.google.com/uc?export=view&id=1WIlTCPnhfCG7nERYBoYVFGclvc-TxHg2" data-h="4000" data-w="6000"/>
+        <div class="grid-item"><img class="lazy-load" data-src="http://drive.google.com/uc?export=view&id=13xJMxgZoxQeYujCGPcn0uq4O-Gz9cay7" data-original="http://drive.google.com/uc?export=view&id=1WIlTCPnhfCG7nERYBoYVFGclvc-TxHg2" data-h="4000" data-w="6000"/> </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1RaIE0AE8yP3kY3h8XR7ArWTieKj-f7T9" data-src="http://drive.google.com/uc?export=view&id=1mSneteV_FekthxuQT1x3swqn_Z2YDJ4d" data-h="4000" data-w="6000"/>
+        <div class="grid-item"><img class="lazy-load" data-src="http://drive.google.com/uc?export=view&id=1RaIE0AE8yP3kY3h8XR7ArWTieKj-f7T9" data-original="http://drive.google.com/uc?export=view&id=1mSneteV_FekthxuQT1x3swqn_Z2YDJ4d" data-h="4000" data-w="6000"/> </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1-mITMGXgJ5zK5-BeqwIVK3PmMoYXzPyV" data-src="http://drive.google.com/uc?export=view&id=1LVJ4oTiIgxiir8Jfab-e7aZpWzFAJ65L" data-h="4000" data-w="6000"/>
+        <div class="grid-item"><img class="lazy-load" data-src="http://drive.google.com/uc?export=view&id=1-mITMGXgJ5zK5-BeqwIVK3PmMoYXzPyV" data-original="http://drive.google.com/uc?export=view&id=1LVJ4oTiIgxiir8Jfab-e7aZpWzFAJ65L" data-h="4000" data-w="6000"/> </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1ypMDeJv5SBiTMxNMCYKM2HHE2H6sGyuF" data-src="http://drive.google.com/uc?export=view&id=1UwsQyTjFbWuj7Lsj8aFcchTHHsYsuJBY" data-h="4000" data-w="6000"/>
+        <div class="grid-item"><img class="lazy-load" data-src="http://drive.google.com/uc?export=view&id=1ypMDeJv5SBiTMxNMCYKM2HHE2H6sGyuF" data-original="http://drive.google.com/uc?export=view&id=1UwsQyTjFbWuj7Lsj8aFcchTHHsYsuJBY" data-h="4000" data-w="6000"/> </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1vFyFXlvGfR2EAGxElKsIwcke2OWNPThU" data-src="http://drive.google.com/uc?export=view&id=1jRaLmgotffHq4BpMkutSyg7vHPc_jaO5" data-h="4000" data-w="6000"/>
+        <div class="grid-item"><img class="lazy-load" data-src="http://drive.google.com/uc?export=view&id=1vFyFXlvGfR2EAGxElKsIwcke2OWNPThU" data-original="http://drive.google.com/uc?export=view&id=1jRaLmgotffHq4BpMkutSyg7vHPc_jaO5" data-h="4000" data-w="6000"/> </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=186Us-90er1OCmVDOXVNPa1jEgI82WZEv" data-src="http://drive.google.com/uc?export=view&id=1Bc0w2x9wRN3Kq5LLxTWV47s3NSKG7HsD" data-h="4000" data-w="6000"/>
+        <div class="grid-item"><img class="lazy-load" data-src="http://drive.google.com/uc?export=view&id=186Us-90er1OCmVDOXVNPa1jEgI82WZEv" data-original="http://drive.google.com/uc?export=view&id=1Bc0w2x9wRN3Kq5LLxTWV47s3NSKG7HsD" data-h="4000" data-w="6000"/> </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1HEGrDaMIfb1UlM7zEdZPb4Z7b4o6MStS" data-src="http://drive.google.com/uc?export=view&id=1MWfgfDNqH3phDZNqTeYKq8QP0f4GTK1f" data-h="4000" data-w="6000"/>
+        <div class="grid-item"><img class="lazy-load" data-src="http://drive.google.com/uc?export=view&id=1HEGrDaMIfb1UlM7zEdZPb4Z7b4o6MStS" data-original="http://drive.google.com/uc?export=view&id=1MWfgfDNqH3phDZNqTeYKq8QP0f4GTK1f" data-h="4000" data-w="6000"/> </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1VD4lL9TgCiVFBNK6ujEOdTrT_Q8fADY8" data-src="http://drive.google.com/uc?export=view&id=1E42WZeMN0o8zBvtadm-LYepnNVkfroOX" data-h="4000" data-w="6000"/>
+        <div class="grid-item"><img class="lazy-load" data-src="http://drive.google.com/uc?export=view&id=1VD4lL9TgCiVFBNK6ujEOdTrT_Q8fADY8" data-original="http://drive.google.com/uc?export=view&id=1E42WZeMN0o8zBvtadm-LYepnNVkfroOX" data-h="4000" data-w="6000"/> </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1mA5UEUda3-k0MyyHQ0bozIzwbAdliLHQ" data-src="http://drive.google.com/uc?export=view&id=1JOpimLveQ-ELms0fFfRBVcRs9Ep4yzcx" data-h="4000" data-w="6000"/>
+        <div class="grid-item"><img class="lazy-load" data-src="http://drive.google.com/uc?export=view&id=1mA5UEUda3-k0MyyHQ0bozIzwbAdliLHQ" data-original="http://drive.google.com/uc?export=view&id=1JOpimLveQ-ELms0fFfRBVcRs9Ep4yzcx" data-h="4000" data-w="6000"/> </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1FozLyPcmKkk5wTe4kRbQGBSB5enfmpnl" data-src="http://drive.google.com/uc?export=view&id=1ZqOTYGDaFYMmMBqQKms6qsS-xLTSaDZO" data-h="4000" data-w="6000"/>
+        <div class="grid-item"><img class="lazy-load" data-src="http://drive.google.com/uc?export=view&id=1FozLyPcmKkk5wTe4kRbQGBSB5enfmpnl" data-original="http://drive.google.com/uc?export=view&id=1ZqOTYGDaFYMmMBqQKms6qsS-xLTSaDZO" data-h="4000" data-w="6000"/> </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1gd7N1scOHwjGa7Y2WnePcUA5H7vpavl3" data-src="http://drive.google.com/uc?export=view&id=1fscz7IWVRCS7upX1nQfYi4X4otn6OQMG" data-h="3904" data-w="5525"/>
+        <div class="grid-item"><img class="lazy-load" data-src="http://drive.google.com/uc?export=view&id=1gd7N1scOHwjGa7Y2WnePcUA5H7vpavl3" data-original="http://drive.google.com/uc?export=view&id=1fscz7IWVRCS7upX1nQfYi4X4otn6OQMG" data-h="3904" data-w="5525"/> </div>
 
-        <img class="grid-item" src="http://drive.google.com/uc?export=view&id=1q43pICqrv7zLftcEVES_ywHa48mcOuGR" data-src="http://drive.google.com/uc?export=view&id=1pttbkokdbqOKdgEl6oTDJ8xm7JbB6V0c" data-h="2616" data-w="3932"/>
+        <div class="grid-item"><img class="lazy-load" data-src="http://drive.google.com/uc?export=view&id=1q43pICqrv7zLftcEVES_ywHa48mcOuGR" data-original="http://drive.google.com/uc?export=view&id=1pttbkokdbqOKdgEl6oTDJ8xm7JbB6V0c" data-h="2616" data-w="3932"/> </div>
     </div>
     <!-- Root element of PhotoSwipe. Must have class pswp. -->
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
@@ -191,6 +221,7 @@
 
     </div>
 </div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 <script src="assets/js/gallery.js"></script> 
 </body>
 </html>
