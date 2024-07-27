@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cricket</title>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 50%;
+      }
+
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+    </style>
+</head>
+<body>
+    <form id="form">
+      <input class="player" type="checkbox" id="1" name="Kautil" value="Kautil">
+      <label for="1">Kautil</label><br>
+      <input class="player"  type="checkbox" id="2" name="Karthik" value="Karthik">
+      <label for="2">Karthik</label><br>
+      <input class="player"  type="checkbox" id="3" name="Suhas" value="Suhas">
+      <label for="3">Suhas</label><br>
+      <input class="player"  type="checkbox" id="4" name="Sridhar" value="Sridhar">
+      <label for="4">Sridhar</label><br>
+      <input class="player"  type="checkbox" id="5" name="Arjun" value="Arjun">
+      <label for="5">Arjun</label><br>
+      <input class="player"  type="checkbox" id="6" name="Bharat" value="Bharat">
+      <label for="6">Bharat</label><br>
+      <input class="player"  type="checkbox" id="7" name="Raghava" value="Raghava">
+      <label for="7">Raghava</label><br>
+      <input class="player"  type="checkbox" id="8" name="Sruthi" value="Sruthi">
+      <label for="8">Sruthi</label><br>
+      <input class="player"  type="checkbox" id="9" name="Vagdevi" value="Vagdevi">
+      <label for="9">Vagdevi</label><br>
+      <input class="player"  type="checkbox" id="10" name="Satya" value="Satya">
+      <label for="10">Satya</label><br>
+      <input class="player"  type="checkbox" id="11" name="Pallavi" value="Pallavi">
+      <label for="11">Pallavi</label><br>
+      <input class="player"  type="checkbox" id="12" name="Kiran" value="Kiran">
+      <label for="12">Kiran</label><br><br>
+      <input type="submit" value="Submit">
+    </form>
+    <br><br><br>
+
+    <table id="table">
+      <tr>
+        <th>Name</th>
+        <th>Position</th>
+      </tr>
+    </table>
+    <script>
+      let shuffled = false;
+      function shuffle(array) {
+        let currentIndex = array.length;
+        // While there remain elements to shuffle...
+        while (currentIndex !== 0) {
+          // Pick a remaining element...
+          let randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex--;
+
+          // And swap it with the current element.
+          [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+        }
+      }
+      function onSubmit(event) {
+        event.preventDefault();
+        if(shuffled) {
+          return;
+        }
+        shuffled = true;
+        let players = Array.from(document.getElementsByClassName('player'))
+                .filter(e => e.checked).map(e => e.name);
+        players.unshift('burn');
+        console.log(players);
+        shuffle(players);
+        players = players.filter(e => e !== 'burn');
+        const table = document.getElementById('table');
+        for (let i = 0; i < players.length; i++) {
+          const row = table.insertRow();
+          row.insertCell().appendChild(document.createTextNode(i+1));
+          row.insertCell().appendChild(document.createTextNode(players[i]));
+        }
+      }
+      const form = document.getElementById("form");
+      form.addEventListener("submit", onSubmit);
+    </script>
+</body>
+</html>
